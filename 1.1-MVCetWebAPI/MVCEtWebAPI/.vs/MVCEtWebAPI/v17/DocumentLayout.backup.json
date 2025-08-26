@@ -1,12 +1,105 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVC et WebAPI\\MVCEtWebAPI\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63938DA7-FB78-4CD8-B88E-D5259733225C}|WebAPI\\WebAPI.csproj|c:\\users\\2258455\\desktop\\5w5-programmationwebavancee\\1.1-mvcetwebapi\\mvcetwebapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63938DA7-FB78-4CD8-B88E-D5259733225C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63938DA7-FB78-4CD8-B88E-D5259733225C}|WebAPI\\WebAPI.csproj|c:\\users\\2258455\\desktop\\5w5-programmationwebavancee\\1.1-mvcetwebapi\\mvcetwebapi\\webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{63938DA7-FB78-4CD8-B88E-D5259733225C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01EEDB0A-9439-4AB7-94C1-548B50DEBF4A}|Models\\Models.csproj|c:\\users\\2258455\\desktop\\5w5-programmationwebavancee\\1.1-mvcetwebapi\\mvcetwebapi\\models\\models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{01EEDB0A-9439-4AB7-94C1-548B50DEBF4A}|Models\\Models.csproj|solutionrelative:models\\models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89C43C5E-8DEE-4710-937B-A56F44EE408B}|MVCEtWebAPI\\MVCEtWebAPI.csproj|c:\\users\\2258455\\desktop\\5w5-programmationwebavancee\\1.1-mvcetwebapi\\mvcetwebapi\\mvcetwebapi\\mvcetwebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{89C43C5E-8DEE-4710-937B-A56F44EE408B}|MVCEtWebAPI\\MVCEtWebAPI.csproj|solutionrelative:mvcetwebapi\\mvcetwebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89C43C5E-8DEE-4710-937B-A56F44EE408B}|MVCEtWebAPI\\MVCEtWebAPI.csproj|c:\\users\\2258455\\desktop\\5w5-programmationwebavancee\\1.1-mvcetwebapi\\mvcetwebapi\\mvcetwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89C43C5E-8DEE-4710-937B-A56F44EE408B}|MVCEtWebAPI\\MVCEtWebAPI.csproj|solutionrelative:mvcetwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Models",
+              "DocumentMoniker": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\Models\\Models.csproj",
+              "RelativeDocumentMoniker": "Models\\Models.csproj",
+              "ToolTip": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\Models\\Models.csproj",
+              "RelativeToolTip": "Models\\Models.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-26T19:37:05.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebAPI",
+              "DocumentMoniker": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\WebAPI\\WebAPI.csproj",
+              "RelativeDocumentMoniker": "WebAPI\\WebAPI.csproj",
+              "ToolTip": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\WebAPI\\WebAPI.csproj",
+              "RelativeToolTip": "WebAPI\\WebAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-26T19:36:47.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MVCEtWebAPI",
+              "DocumentMoniker": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\MVCEtWebAPI\\MVCEtWebAPI.csproj",
+              "RelativeDocumentMoniker": "MVCEtWebAPI\\MVCEtWebAPI.csproj",
+              "ToolTip": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\MVCEtWebAPI\\MVCEtWebAPI.csproj",
+              "RelativeToolTip": "MVCEtWebAPI\\MVCEtWebAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-26T19:36:40.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\MVCEtWebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "MVCEtWebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\MVCEtWebAPI\\Program.cs",
+              "RelativeToolTip": "MVCEtWebAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T19:26:12.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\2258455\\Desktop\\5W5-ProgrammationWebAvancee\\1.1-MVCetWebAPI\\MVCEtWebAPI\\WebAPI\\Program.cs*",
+              "RelativeToolTip": "WebAPI\\Program.cs*",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T19:12:27.121Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
