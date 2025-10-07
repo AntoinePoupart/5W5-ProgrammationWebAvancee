@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, ValidationErrors, Validators, ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, ValidationErrors, Validators, ReactiveFormsModule, FormGroup, ValidatorFn } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -29,7 +29,30 @@ export class AppComponent {
         comments: ['', Validators.minLength(10)],
 
       },
+      { validators: this.nomDansCommentaire() }
     );
+  }
+
+  nomDansCommentaire(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      // On récupère les valeurs de nos champs textes
+      const commentaire = control.get('comments');
+      const nom = control.get('name');
+      // On regarde si les champs sont remplis avant de faire la validation
+      if (!commentaire?.value || !nom?.value) {
+        return null;
+      }
+      // On fait notre validation
+      const estValide = !commentaire.value.includes(nom.value);
+
+      if (!estValide) {
+        // On ajoute l'erreur pour l'afficher sous le champ courriel
+        // On conserve les autres erreurs déjà présentes
+        commentaire.setErrors({ ...commentaire.errors, nomDansCommentaire: true });
+      }
+
+      return estValide ? null : { nomDansCommentaire: true };
+    };
   }
 }
 

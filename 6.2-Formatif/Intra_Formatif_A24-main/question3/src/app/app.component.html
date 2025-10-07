@@ -6,12 +6,15 @@
 
 <h1>Formulaire qui sert à rien</h1>
 <mat-card style="width: 700px; margin: auto; padding: 20px;">
+
+  <!-- Ajouter le [formGroup]="formGroup" au début du formulaire -->
   <form [formGroup]="formGroup">
 
     <mat-form-field style="width: 100%">
       <mat-label>Nom</mat-label>
       <!-- Ne pas oublier le formControlName lié avec le app.ts dans le formGroup -->
-      <input matInput type="text" placeholder="Nom et prénom" name="name" Ne pas oublier formControlName="name">
+      <input matInput type="text" placeholder="Nom et prénom" name="name" formControlName="name">
+      <!-- hasERROR doit avoir le même le nom que le validator dans le app.ts mais sans majuscule -->
       @if(formGroup.get('name')?.hasError('required')) {
       <mat-error> Votre nom est <strong>requis</strong> </mat-error>
       }
@@ -23,6 +26,7 @@
       @if(formGroup.get('roadnumber')?.hasError('required')) {
       <mat-error> Votre numéro de rue est <strong>requis</strong> </mat-error>
       }
+      <!-- Utiliser || quand j'ai plusieurs validations -->
       @if(formGroup.get('roadnumber')?.hasError('min') || formGroup.get('roadnumber')?.hasError('max')) {
       <mat-error> Votre numéro de rue doit être compris entre <strong>1000</strong> et <strong>9999</strong>
       </mat-error>
@@ -49,6 +53,10 @@
       @if(formGroup.get('comments')?.hasError('minlength')) {
       <mat-error> Votre commentaire doit contenir au moins 10 mots </mat-error>
       }
+      @if(formGroup.hasError('nomDansCommentaire')) {
+      <mat-error> Le commentaire ne doit pas mentionner le nom de l’utilisateur </mat-error>
+      }
+
 
     </mat-form-field>
 
