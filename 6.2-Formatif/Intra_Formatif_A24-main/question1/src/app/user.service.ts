@@ -29,5 +29,21 @@ export class UserService {
     this.route.navigate(['/login']);
   }
 
+  //Voir guardguard
+  isLogged() {
+    if (localStorage.getItem(USER_KEY) == null) {
+      return false;
+    }
+    return true;
+  }
+
+  //Peut faire cela pour preferCat **VoirPreferGuard**
+  preferCat() {
+    if (this.currentUser?.prefercat == false) {
+      return false;
+    }
+    return true;
+  }
+
 
 }

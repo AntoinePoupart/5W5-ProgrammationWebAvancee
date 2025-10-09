@@ -5,15 +5,15 @@ import { LoginComponent } from './login/login.component';
 import { CatComponent } from './cat/cat.component';
 import { DogComponent } from './dog/dog.component';
 import { guardGuard } from './--guard--/guard.guard';
-import { preferCatGuard } from './--guard--/prefer-cat.guard';
+import { prefercatGuard } from './--guard--/prefer-cat.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full'},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'cat', component: CatComponent, canActivate: [guardGuard, preferCatGuard]},
+  { path: 'cat', component: CatComponent, canActivate: [guardGuard, prefercatGuard] },
   { path: 'dog', component: DogComponent, canActivate: [guardGuard] },
   { path: 'home', component: HomeComponent, canActivate: [guardGuard] },
-  { path: '**', redirectTo: '/'}
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({
