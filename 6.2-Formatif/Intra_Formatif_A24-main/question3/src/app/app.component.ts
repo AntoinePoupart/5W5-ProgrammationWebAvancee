@@ -74,3 +74,21 @@ export class AppComponent {
 }
 
 
+
+// matchAnimalWordsSimple(): ValidatorFn {
+//   return (control: AbstractControl): ValidationErrors | null => {
+//     const numberOfAnimals = control.get('numberOfAnimals')?.value;
+//     const animalNames = control.get('animalNames')?.value;
+
+//     if (!numberOfAnimals || !animalNames) return null;
+
+//     // Compter le nombre de mots
+//     const wordCount = animalNames.trim().split(/\s+/).length;
+
+//     // Retourne null si valide, ou l'erreur sinon
+//     return wordCount === numberOfAnimals
+//       ? null
+//       : { animalWordsMismatch: { expected: numberOfAnimals, actual: wordCount } };
+//   };
+// }
+

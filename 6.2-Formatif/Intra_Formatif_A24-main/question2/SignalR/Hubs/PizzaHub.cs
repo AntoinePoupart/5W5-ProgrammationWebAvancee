@@ -62,3 +62,62 @@ namespace SignalR.Hubs
         }
     }
 }
+
+//public class QuestionHub : Hub
+//{
+//    private static List<Question> _questions = new();
+//    private static Dictionary<string, List<string>> _groupViewers = new();
+
+//    // 1️ Ajouter une question
+//    public async Task AddQuestion(Question question)
+//    {
+//        _questions.Add(question);
+
+//        // Envoyer la liste complète à tout le monde
+//        await Clients.All.SendAsync("AllQuestions", _questions);
+
+//        // Répondre à celui qui vient d’ajouter la question
+//        await Clients.Caller.SendAsync("AddQuestion", question.Text);
+//    }
+
+//    // 2️ Rejoindre un groupe (sélection d'une question)
+// public async Task JoinQuestionGroup(string questionId)
+//  {
+//    await Groups.AddToGroupAsync(Context.ConnectionId, questionId);
+// on notifie le groupe en envoyant seulement l'id
+//    await Clients.Group(questionId).SendAsync("nbviewers", questionId);
+//  }
+
+//    // 3️ Quitter le groupe
+//    public async Task LeaveGroup(string questionId)
+//    {
+//        await Groups.RemoveFromGroupAsync(Context.ConnectionId, questionId);
+//        await Clients.Group(questionId).SendAsync("nbviewers", questionId);
+//    }
+
+//    // 4️ Voter (facile)
+//    public async Task Vote(string questionId, bool isYes)
+//    {
+//        // Tu ferais juste une logique simple ici (pas besoin de base de données)
+//        await Clients.Group(questionId).SendAsync("VoteReceived", questionId, isYes);
+//    }
+
+//    // 5️ Quand un client se connecte / déconnecte
+//    public override async Task OnConnectedAsync()
+//    {
+//        await base.OnConnectedAsync();
+//        Console.WriteLine($"Connecté : {Context.ConnectionId}");
+//    }
+
+//    public override async Task OnDisconnectedAsync(Exception? exception)
+//    {
+//        await base.OnDisconnectedAsync(exception);
+//        Console.WriteLine($"Déconnecté : {Context.ConnectionId}");
+//    }
+//}
+
+//public class Question
+//{
+//    public string Id { get; set; } = Guid.NewGuid().ToString();
+//    public string Text { get; set; }
+//}

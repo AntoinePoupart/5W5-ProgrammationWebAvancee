@@ -25,3 +25,13 @@ export const prefercatGuard: CanActivateFn = (route, state) => {
 //     return true;
 
 // };
+
+// export const getAge: CanActivateFn = (route, state) => {
+//     // Vérifie directement dans le if si l'âge est 18
+//     if (inject(AgeService).getAge() == 18) {
+//         return true; // accès autorisé
+//     }
+//     else {
+//         return createUrlTreeFromSnapshot(route, ['/pageAppropriee']); // redirige sinon
+//     }
+// };
