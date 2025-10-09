@@ -50,9 +50,13 @@
     <mat-form-field style="width: 100%">
       <mat-label>Commentaire</mat-label>
       <textarea matInput placeholder="Votre commentaire" name="comments" formControlName="comments"></textarea>
-      @if(formGroup.get('comments')?.hasError('minlength')) {
+      @if(formGroup.get('comments')?.hasError('minDixMots')) {
       <mat-error> Votre commentaire doit contenir au moins 10 mots </mat-error>
       }
+      @if(formGroup.get('comments')?.hasError('minlength')) {
+      <mat-error> Votre commentaire doit contenir au moins 10 lettre </mat-error>
+      }
+      <!-- Si validateur sur plusieurs champs mettre juste le hasError -->
       @if(formGroup.hasError('nomDansCommentaire')) {
       <mat-error> Le commentaire ne doit pas mentionner le nom de l’utilisateur </mat-error>
       }
