@@ -115,6 +115,7 @@ export class AppComponent {
       });
     });
 
+    //Utiliser IncreasePlayersChoices dans Backend pour méthode SelectChoice
     this.hubConnection.on('IncreasePlayersChoices', (choiceIndex: number) => {
       this.zone.run(() => {
         if (this.currentQuestion) {
@@ -123,6 +124,7 @@ export class AppComponent {
       });
     });
 
+    //TODO: Rajouter un alerte pour Bonne Réponse 
     this.hubConnection.on('BonneReponse', () => {
       this.zone.run(() => {
         this.nbRightAnswers++;
@@ -130,6 +132,7 @@ export class AppComponent {
       });
     });
 
+    //TODO: Rajouter un alerte pour Bonne Réponse 
     this.hubConnection.on('MauvaiseReponse', (BonneReponse: number) => {
       this.zone.run(() => {
         alert("Mauvaise réponse, la bonne réponse était : " + BonneReponse)
