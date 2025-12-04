@@ -75,10 +75,13 @@ public class MathBackgroundService : BackgroundService
         await _mathQuestionHub.Clients.All.SendAsync("IncreasePlayersChoices", choice);
     }
 
-    private async Task EvaluateChoices()
-    {
+    private async Task EvaluateChoices(){
         // TODO: La méthode va avoir besoin d'un scope
-        using (IServiceScope scope = _mathQuestionsService.CreateScope())
+    using (IServiceScope scope = _serviceScopeFactory.CreateScope()) 
+    {
+        //Ajout du Background Service
+        BackgroundServiceContext dbContext = scope.ServiceProvider.GetRequiredService<BackgroundServiceContext>();
+
         foreach (var userId in _data.Keys)
         {
             var userData = _data[userId];
@@ -86,11 +89,17 @@ public class MathBackgroundService : BackgroundService
             // TODO: Modifier et sauvegarder le NbRightAnswers des joueurs qui ont la bonne réponse
             if (userData.Choice == _currentQuestion!.RightAnswerIndex)
             {
-                await _mathQuestionHub.Clients.All.SendAsync("BonneReponse");
+                Player? player = await dbContext.Player.SingleOrDefaultAsync(p => p.UserId == userId);
+                if(player != null)
+                {
+                    player.NbRightAnswers++;
+                    await _mathQuestionHub.Clients.User(userId).SendAsync("BonneReponse");
+                }
+                    
             }
             else
             {
-                await _mathQuestionHub.Clients.All.SendAsync("MauvaiseReponse");
+               await _mathQuestionHub.Clients.User(userId).SendAsync("MauvaiseReponse", _currentQuestion.Answers[_currentQuestion.RightAnswerIndex]);
             }
 
         }
@@ -99,7 +108,10 @@ public class MathBackgroundService : BackgroundService
         {
             _data[key].Choice = -1;
         }
+        //Rajout du SaveChanges
+        await dbContext.SaveChangesAsync();
     }
+}
 
     private async Task Update(CancellationToken stoppingToken)
     {
