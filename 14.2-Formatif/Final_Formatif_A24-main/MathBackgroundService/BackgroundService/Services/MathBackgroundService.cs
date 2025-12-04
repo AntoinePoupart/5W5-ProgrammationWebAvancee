@@ -108,7 +108,7 @@ public class MathBackgroundService : BackgroundService
         {
             _data[key].Choice = -1;
         }
-        //Rajout du SaveChanges
+        //Rajout du SaveChanges (Mettre à jour le nombre de bonnes réponses (NbRightAnswers) des joueurs qui ont eu la bonne réponse dans la BD)
         await dbContext.SaveChangesAsync();
     }
 }
